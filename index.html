@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Waleed & An</title>
+<style>
+body{margin:0;background:#f8f5f0;color:#403a34;font-family:Georgia,serif;text-align:center}
+.card{max-width:600px;margin:auto;padding:70px 25px}
+h1{font-size:48px;font-weight:400;margin:15px 0}
+h2{font-weight:400}
+.date{letter-spacing:4px;margin:25px}
+.welcome{font-size:28px;margin-top:60px}
+.details{margin-top:45px;line-height:2;font-size:18px}
+.button{display:inline-block;margin-top:20px;padding:12px 28px;border:1px solid #403a34;border-radius:30px;color:#403a34;text-decoration:none}
+.note{margin-top:60px;font-size:14px;line-height:1.7}
+</style>
+</head>
+<body>
+<div class="card">
+<h2>Wedding Invitation</h2>
+<h1>Waleed &amp; An</h1>
+<div class="date">MAY 9, 2027</div>
+<div class="welcome">Welcome, <span id="guest">Guest</span> 🤍</div>
+<p>We are delighted to invite you<br>to celebrate our special day with us.</p>
+<div class="details">
+<strong>Paris Hall</strong><br>
+Zoya Garden for Events<br><br>
+<strong>May 9, 2027</strong><br>
+<a class="button" href="https://maps.google.com" target="_blank">View Location</a>
+</div>
+<div class="note">
+This invitation is personal and exclusively intended for the named guest.<br>
+Please do not share or transfer this invitation.
+</div>
+</div>
+<script>
+const guest = new URLSearchParams(location.search).get("guest");
+if (guest) document.getElementById("guest").textContent = guest;
+</script>
+</body>
+</html>
